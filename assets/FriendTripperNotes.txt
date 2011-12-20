@@ -1,0 +1,125 @@
+Inputs travel destination and search radius
+
+Three tiered query system check our db, then open street maps, and if that fails check google
+Store Lat longs for known locations in database... 
+
+Store failed geocoding perhaps manually code them later
+
+Progress bar is necessary... collecting friends, checking their locations, calculating distances etc. 
+
+When friends list is collected, how should it be displayed... Facebook apis for displaying friends etc.
+
+Create event before inviting...
+
+features:
+Select to message
+select to invite
+
+Message all
+Invite all
+
+Display friends map (by location or whole world)?
+
+Store user data?
+
+Everytime it is used check for new friends and check if friend locations has changed?
+
+"The last time we checked your friends' locations was DATE, some of your friends may have moved or you may have added new friends, do you want us to check again."
+
+a = [[:planes, 21], [:cars, 36]]
+h = Hash[*a]  # => { :planes=>21, :cars=>36}
+
+user database:
+{
+facebook_user_id = {
+last_used = Date,
+past_locations = [location_id,location_id]
+friends = [facebook_user_id,facebook_user_id,facebook_user_id,facebook_user_id,facebook_user_id]
+},
+facebook_user_id = {
+last_used = Date,
+past_locations = [location_id,location_id]
+friends = [facebook_user_id,facebook_user_id,facebook_user_id,facebook_user_id,facebook_user_id]
+},
+facebook_user_id = {
+last_used = Date,
+past_locations = [location_id,location_id]
+friends = [facebook_user_id,facebook_user_id,facebook_user_id,facebook_user_id,facebook_user_id]
+},
+facebook_user_id = {
+last_used = Date,
+past_locations = [location_id,location_id]
+friends = [facebook_user_id,facebook_user_id,facebook_user_id,facebook_user_id,facebook_user_id]
+},
+facebook_user_id = {
+last_used = Date,
+past_locations = [location_id,location_id]
+friends = [facebook_user_id,facebook_user_id,facebook_user_id,facebook_user_id,facebook_user_id]
+},
+}
+
+facebook_users db:
+{
+	facebook_user_id = {
+		:location => location_id,
+	},
+	facebook_user_id = {
+		:location => location_id,
+	},
+	facebook_user_id = {
+		:location => location_id,
+	},
+	facebook_user_id = {
+		:location => location_id,
+	},
+	facebook_user_id = {
+		:location => location_id,
+	}
+}
+
+locations db:
+{
+	location_id => {
+		:name => Chicago, Illinois,
+		:lat => 12.12123,
+		:long => 11.11123,
+	},
+	location_id => {
+		:name => Chicago, Illinois,
+		:lat => 12.12123,
+		:long => 11.11123
+	},
+	location_id => {
+		:name => Chicago, Illinois,
+		:lat => 12.12123,
+		:long => 11.11123
+	}
+}
+
+distances db:
+{
+	distance_id => {
+		:distance => 50,
+	},
+	distance_id => {
+		:distance => 20,
+	},	
+	distance_id => {
+		:distance => 1000,
+	},
+	distance_id => {
+		:distance => 70,
+	},
+	distance_id => {
+		:distance => 3000,
+	},
+}
+
+distance_ids = concatenate(location_id1,location_id2) where id1 < id2
+
+At high level how many apps can we get for the price of one:
+
+FriendTripper: Travel destination(s) app
+FriendMap: Friend mapper
+Who do I know in: Location query
+FriendTour: customized for bands (invite fans to show event based on location)
