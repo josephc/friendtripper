@@ -17,7 +17,7 @@ development:
   encoding: unicode
   database: friendtripper_development
   pool: 5
-  username: friendtripper
+  username: josephchildress
   password: 123d0l0res
 
   # Connect on a TCP socket. Omitted by default since the client uses a
@@ -43,7 +43,7 @@ test:
   encoding: unicode
   database: friendtripper_test
   pool: 5
-  username: friendtripper
+  username: josephchildress
   password: 123d0l0res
 
 production:
@@ -51,5 +51,5 @@ production:
   encoding: unicode
   database: friendtripper_production
   pool: 5
-  username: friendtripper
+  username: josephchildress
   password: 123d0l0res
